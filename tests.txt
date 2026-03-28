@@ -1,0 +1,6 @@
+mkdir -p build && cd build
+cmake ..
+make
+
+dd if=/dev/zero of=../ciblk.img bs=1024 count=1
+./simblock ../ciblk.img
